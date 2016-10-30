@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
+def AAVersion = '4.1.0'
 
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.droidconuk.frasam.preparemyorder"
-        minSdkVersion 19
+        minSdkVersion 22
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -20,6 +21,7 @@ android {
 }
 
 dependencies {
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
